@@ -1,0 +1,15 @@
+{% extends "layouts/layouts.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h3>{{ current_user.username }}</h3>
+        <h3>{{ current_user.email }}</h3>
+        <h3>{{ current_user.mobile }}</h3>
+        <a class="ml-2" href="{{ url_for('logout') }}">Logout</a>
+
+    </div>
+{% endblock %}
